@@ -16,10 +16,8 @@ function deleteDigit(n) {
     for (let index = 0; index < String(n).split('').length; index++) {
         const arr = String(n).split('');
         arr.splice(index, 1);
-        console.log(arr);
         ans.push(Number(arr.join('')));
     }
-    console.log(ans);
     return Math.max(...ans);
 }
 
