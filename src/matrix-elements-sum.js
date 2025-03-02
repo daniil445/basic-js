@@ -17,7 +17,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  * The result should be 9
  */
 function getMatrixElementsSum(matrix) {
-    console.log('your task and test is not equal');
+    //your task and test is not equal;
     let summ = 0;
     let count = 0;
     if (matrix.length === matrix[0].length) matrix.flat(Infinity).map((item) => summ += item);
