@@ -5,25 +5,26 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 const chainMaker = {
-  getLength() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    arr_chain =[],
+    getLength() {
+        return arr_chain.length;
   },
-  addLink(/* value */) {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    addLink(value) {
+        if (typeof value === 'string') arr_chain.push(value);
   },
-  removeLink(/* position */) {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    removeLink(position) {
+        if (position < arr_chain.length) arr_chain.splice(position, 1);
   },
-  reverseChain() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    reverseChain() {
+        arr_chain.reverse();
   },
-  finishChain() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    finishChain() {
+        let answer = '';
+        arr_chain.forEach(function (item) {
+            if (answer.length > 0) answer += '~~';
+            answer += `( ${item} )`;
+        });
+      return arr_chain;
   }
 };
 
